@@ -27,7 +27,7 @@ class _WatchActivityRunningPageState extends State<WatchActivityRunningPage> {
         _elapsedSeconds++;
       });
 
-      if (_elapsedSeconds % 600 == 0) {
+      if (_elapsedSeconds % 60 == 0) {
         _show10MinAlert();
       }
     });
@@ -41,11 +41,18 @@ class _WatchActivityRunningPageState extends State<WatchActivityRunningPage> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         title: const Text(
           '¡Sigue así!',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            color: Colors.white,
+            fontStyle: FontStyle.italic, 
+            fontWeight: FontWeight.bold),
         ),
         content: const Text(
           'Has completado 10 minutos 🎉',
-          style: TextStyle(color: Colors.white70),
+          style: TextStyle(
+            color: Colors.white70,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.bold
+            ),
         ),
         actions: [
           TextButton(
@@ -126,7 +133,7 @@ class _WatchActivityRunningPageState extends State<WatchActivityRunningPage> {
       ),
       child: Row(
         children: [
-          Icon(icon, color: Colors.cyanAccent, size: 18),
+          Icon(icon, color: Colors.blue, size: 18),
           const SizedBox(width: 10),
           Text(label, style: const TextStyle(color: Colors.white70)),
           const Spacer(),
@@ -150,7 +157,11 @@ class _WatchActivityRunningPageState extends State<WatchActivityRunningPage> {
                 const Icon(Icons.directions_run, size: 42, color: Colors.greenAccent),
                 const SizedBox(height: 8),
                 const Text('Actividad en curso',
-                    style: TextStyle(fontSize: 18, color: Colors.white)),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold, 
+                      color: Colors.white)),
                 const SizedBox(height: 12),
                 Text(
                   _formatTime(_elapsedSeconds),
@@ -174,7 +185,12 @@ class _WatchActivityRunningPageState extends State<WatchActivityRunningPage> {
                       borderRadius: BorderRadius.circular(30),
                     ),
                   ),
-                  child: const Text('Detener', style: TextStyle(fontSize: 16)),
+                  child: const Text('Detener', style: TextStyle(
+                    fontSize: 16,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white
+                    )),
                 ),
               ],
             ),

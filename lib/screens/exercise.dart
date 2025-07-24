@@ -54,7 +54,11 @@ class _WatchExercisePageState extends State<WatchExercisePage> {
                     ),
                     padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
                   ),
-                  child: const Text('Comenzar', style: TextStyle(fontSize: 15)),
+                  child: const Text('Comenzar', style: TextStyle(
+                    fontSize: 15,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white)),
                 ),
                 const SizedBox(height: 12),
                 TextButton(

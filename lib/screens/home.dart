@@ -17,8 +17,9 @@ class HomePage extends StatelessWidget {
             const Text(
               '¡Hola, Atleta!',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 25,
                 color: Colors.white,
+                fontStyle: FontStyle.italic,
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
@@ -26,7 +27,11 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 6),
             const Text(
               '¡Vas increíble! 💪🏽',
-              style: TextStyle(color: Colors.white70),
+              style: TextStyle(color: Colors.white70,
+              fontSize: 15,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold
+              ),
               textAlign: TextAlign.center,
             ),
 
@@ -52,11 +57,16 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const WatchExercisePage()),
                 );
               },
-              icon: const Icon(Icons.directions_run, size: 20),
-              label: const Text('Ejercicio'),
+              icon: const Icon(Icons.directions_run, size: 20, color: Colors.white,),
+              label: const Text('Ejercicio',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.bold
+                ),),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blueAccent,
-                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 textStyle: const TextStyle(fontSize: 16),
               ),
             ),
@@ -67,7 +77,9 @@ class HomePage extends StatelessWidget {
             const Text(
               '“Sé mejor que ayer.”',
               style: TextStyle(
+                fontSize: 18,
                 fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
                 color: Colors.white70,
               ),
               textAlign: TextAlign.center,
